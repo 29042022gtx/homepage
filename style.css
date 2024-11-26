@@ -242,4 +242,42 @@ footer {
   }
 }
 
+@media (width >= 992px) {
+  .header-content {
+    display: flex;
+    align-items: center;
+    margin: 3em 3em 0;
+  }
 
+  .header-portrait {
+    flex-shrink: 0;
+    width: 40%;
+    max-width: 400px;
+    margin: 0;
+    float: none;
+  }
+
+  .header-about {
+    padding: 1px 16px 16px;
+  }
+
+  .portrait-text {
+    top: unset;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-content {
+    flex: 4;
+  }
+
+  .footer-image {
+    flex: 6;
+  }
+}
