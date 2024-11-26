@@ -21,6 +21,8 @@ img {
 
 svg {
   height: 1em;
+  fill: currentColor;
+  vertical-align: -0.125em;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
 
 header {
   position: relative;
-  padding: 2em;
+  padding: 8px;
 }
 
 .header-background {
@@ -61,6 +63,11 @@ header {
   font-size: 3em;
   font-family: 'Playfair Display', serif;
   text-shadow: 0 0 0.2em black;
+}
+
+.header-about {
+  padding: 4px;
+  background-color: white;
 }
 
 .about-title {
@@ -118,7 +125,7 @@ main {
 }
 
 .card {
-  box-shadow: 0 0 8px gray;
+  box-shadow: 0 0 4px 2px lightgray;
 }
 
 .card-img {
@@ -143,9 +150,12 @@ main {
 
 footer {
   margin-top: 1em;
-  padding: 1px 1em 0;
   color: white;
   background-color: var(--blue);
+}
+
+.footer-content {
+  padding: 1px 8px 8px;
 }
 
 .footer-title {
@@ -164,6 +174,72 @@ footer {
   letter-spacing: 0.25em;
 }
 
-.footer-img {
+.footer-image img {
   width: 100%;
 }
+
+.footer-icon {
+  display: none;
+}
+
+@media (width >= 768px) {
+  header {
+    padding: 32px;
+  }
+
+  .header-content {
+    margin: 5em 3em 0;
+  }
+
+  .header-portrait {
+    width: 50%;
+    float: left;
+    margin: -5em 1em 0 -3em;
+  }
+
+  .header-about {
+    box-shadow: 0 0 8px gray;
+  }
+
+  .about-link {
+    text-align: right;
+  }
+
+  .portrait-text {
+    bottom: unset;
+    left: 80%;
+    top: 0;
+    width: 100%;
+  }
+
+  .card-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  footer {
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    padding: 32px;
+  }
+
+  footer > * {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .footer-title,
+  .footer-link {
+    text-align: left;
+  }
+
+  .footer-image img {
+    height: 100%;
+  }
+
+  .footer-icon {
+    display: inline;
+  }
+}
+
+
